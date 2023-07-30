@@ -24,6 +24,15 @@ let pincode = function (e) {
             console.log(newarr)
             return newarr
         })
+        .then((newarr)=>{
+            let ol = document.querySelector("ol")
+             newarr.forEach(element => {
+                let li = document.createElement("li")
+                li.innerHTML=`${element.Name}, ${element.district}, ${element.state}`
+                ol.appendChild(li)
+                });
+            
+        })
         .catch((error) => {
             console.log("an error has occured" + error)
         })
