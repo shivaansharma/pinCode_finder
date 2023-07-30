@@ -22,6 +22,7 @@ let pincode = function (e) {
                 return new obj(element.Name, element.District,element.State)
             })
             console.log(newarr)
+            return newarr
         })
         .catch((error) => {
             console.log("an error has occured" + error)
