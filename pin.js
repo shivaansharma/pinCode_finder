@@ -19,23 +19,26 @@ let pincode = function (e) {
                 }
             }
             let newarr = array.map((element) => {
-                return new obj(element.Name, element.District,element.State)
+                return new obj(element.Name, element.District, element.State)
             })
             console.log(newarr)
+            let ol = document.querySelector("ol")
+            ol.innerHTML = ""
             return newarr
         })
-        .then((newarr)=>{
+        .then((newarr) => {
             let ol = document.querySelector("ol")
-             newarr.forEach(element => {
+            newarr.forEach(element => {
                 let li = document.createElement("li")
-                li.innerHTML=`${element.Name}, ${element.district}, ${element.state}`
+                li.innerHTML = `${element.Name}, ${element.district}, ${element.state}`
                 ol.appendChild(li)
-                });
-            
+            });
+            return ol
         })
         .catch((error) => {
             console.log("an error has occured" + error)
         })
+
 }
 let code = document.querySelector("form")
 code.addEventListener("submit", pincode)
