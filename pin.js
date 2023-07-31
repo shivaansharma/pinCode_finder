@@ -50,7 +50,7 @@ let pincode = function (e) {
                 ol.innerHTML = ""
                 post.map((element) => {
                     let li = document.createElement("li")
-                    li.innerHTML = `Pincode :${element.Pincode} <br> District: ${element.District}<br> State : ${element.State}`
+                    li.innerHTML = `Name :${element.Name} <br>Pincode :${element.Pincode} <br> District: ${element.District}<br> State : ${element.State}`
                     ol.appendChild(li)
                 })
 
